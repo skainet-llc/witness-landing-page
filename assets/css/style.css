@@ -103,7 +103,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero { background: var(--dark); color: var(--white); padding: 56px 0 64px; }
 .hero .wrap { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
 @media (min-width: 980px) { .hero .wrap { grid-template-columns: 1.05fr 1fr; gap: 56px; } .hero { padding: 88px 0 96px; } }
-.hero .logo { width: 180px; margin-bottom: 36px; }
+.hero .logo { width: 180px; height: auto; margin-bottom: 36px; }
 .kicker {
   font-weight: 600; font-size: 14px; letter-spacing: .12em;
   text-transform: uppercase; color: var(--red); margin: 0 0 14px;
@@ -294,7 +294,7 @@ table.variants { width: 100%; min-width: 620px; border-collapse: collapse; font-
 .footer .links a { color: var(--white); font-weight: 600; }
 .footer .links li { margin-bottom: 6px; }
 .footer .legal { border-top: 1px solid #3a3a3a; margin-top: 48px; padding-top: 20px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
-.footer .logo { width: 150px; margin-bottom: 18px; }
+.footer .logo { width: 150px; height: auto; margin-bottom: 18px; }
 .cases { background: var(--panel); padding: 24px; }
 @media (max-width: 699px) { .cases { padding: 0; background: none; } .case { background: var(--panel); } }
 .dl-list a .name::after { content: "  \2193 PDF"; color: var(--red); font-size: 13px; letter-spacing: .06em; }
