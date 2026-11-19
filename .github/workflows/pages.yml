@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Lets the one-pager repo trigger a rebuild after a release:
+  #   gh api repos/skainet-llc/witness-landing-page/dispatches -f event_type=onepagers-released
+  repository_dispatch:
+    types: [onepagers-released]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site/downloads
+          cp -r index.html favicon.ico .nojekyll assets _site/
+
+      - name: Fetch one-pager PDFs (optional)
+        env:
+          GH_TOKEN: ${{ secrets.ONEPAGERS_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "ONEPAGERS_TOKEN not set: downloads stay 'available on request'."
+            exit 0
+          fi
+          gh release download -R skainet-llc/witness-one-pagers \
+            --pattern '*.pdf' --pattern '*.zip' -D _site/downloads --clobber \
+            || echo "No release assets downloaded: downloads stay 'available on request'."
+          ls -la _site/downloads
+
+      - name: Render downloads list
+        run: python3 tools/build_downloads.py _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

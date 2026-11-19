@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WITNESS by skAInet</title>
+<meta name="description" content="WITNESS learns how your machines normally run and tells you what deviates, inside your plant. Modular, on-prem condition monitoring built on standard PoE, with no vendor lock-in.">
+<meta name="theme-color" content="#262626">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="skAInet">
+<meta property="og:title" content="WITNESS by skAInet: on-prem condition monitoring">
+<meta property="og:description" content="WITNESS learns how your machines normally run and tells you what deviates, inside your plant. Modular, on-prem, built on standard PoE.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="skAInet logo on dark ground">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/biryani/biryani-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/biryani/biryani-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="skAInet WITNESS, back to top"><img src="assets/img/skainet-logo-white.png" width="400" height="107" alt="skAInet"></a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#delivers">What it delivers</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#usecases">Use cases</a></li>
+        <li><a href="#hardware">Hardware</a></li>
+        <li><a href="#insurers">Insurers</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================================================ HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="assets/img/skainet-logo-white.png" width="400" height="107" alt="skAInet">
+      <p class="kicker">WITNESS</p>
+      <h1>WITNESS learns how your machines <span class="red">normally run</span> and tells you <span class="red">what deviates</span>, inside your plant.</h1>
+      <p class="lead">Hardware and software for condition monitoring: measurement devices on standard PoE record time-series data at your assets, the analytics run in your own server room, and your maintenance staff label the findings. <strong>Your data stays yours.</strong></p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:hello@skainet.io?subject=WITNESS%20pilot">Request a pilot</a>
+        <a class="btn btn-ghost" href="#downloads">Download one-pagers</a>
+      </div>
+    </div>
+
+    <figure class="fp-figure">
+      <svg class="fingerprint" viewBox="0 0 600 370" role="img" aria-labelledby="fp-title fp-desc">
+        <title id="fp-title">Power fingerprint of one actuator travel</title>
+        <desc id="fp-desc">Stylised current curve over time: a start-up peak, a constant travel phase and an end-position peak, drawn in red for normal operation. A second, grey curve of a worn drive runs longer and higher and crosses a threshold line, where a red marker flags the deviation.</desc>
+        <!-- grid -->
+        <g stroke="#3A3A3A" stroke-width="1">
+          <line x1="40" y1="100" x2="580" y2="100"/><line x1="40" y1="200" x2="580" y2="200"/>
+          <line x1="175" y1="40" x2="175" y2="300"/><line x1="310" y1="40" x2="310" y2="300"/><line x1="445" y1="40" x2="445" y2="300"/>
+        </g>
+        <!-- axes -->
+        <g stroke="#8A8A8A" stroke-width="1.5" fill="none">
+          <polyline points="40,36 40,300 584,300"/>
+        </g>
+        <text x="30" y="40" fill="#ACACAC" font-size="12" font-weight="600" letter-spacing="1.2" text-anchor="end" transform="rotate(-90 30 40)">CURRENT</text>
+        <text x="580" y="322" fill="#ACACAC" font-size="12" font-weight="600" letter-spacing="1.2" text-anchor="end">TIME</text>
+        <!-- threshold -->
+        <line x1="40" y1="193" x2="580" y2="193" stroke="#E83B3B" stroke-width="1.4" stroke-dasharray="6 6" opacity=".75"/>
+        <text x="580" y="213" fill="#E8A0A0" font-size="11" font-weight="600" letter-spacing="1.1" text-anchor="end">THRESHOLD</text>
+        <!-- worn / drifting curve -->
+        <path class="fp-draw fp-drift" pathLength="1" fill="none" stroke="#BDBDBD" stroke-width="2.4" stroke-linejoin="round"
+          d="M40,300 L62,300 L68,70 C74,70 84,150 108,176 S150,184 180,180 S250,186 290,180 S370,185 420,178 S460,180 470,173 C482,165 488,110 494,110 C500,110 503,220 508,300 L580,300"/>
+        <!-- normal curve -->
+        <path class="fp-draw fp-normal" pathLength="1" fill="none" stroke="#E83B3B" stroke-width="3.2" stroke-linejoin="round"
+          d="M40,300 L62,300 L68,88 C74,88 82,170 104,200 S140,210 170,208 S230,212 260,209 S330,211 360,208 S390,210 400,206 C410,200 414,150 420,150 C426,150 428,240 432,300 L580,300"/>
+        <!-- annotations -->
+        <g fill="#ACACAC" font-size="11.5" font-weight="600" letter-spacing="1">
+          <text x="80" y="64">START-UP PEAK</text>
+          <text x="160" y="240">CONSTANT TRAVEL</text>
+          <text x="420" y="140" text-anchor="middle">END-POSITION PEAK</text>
+        </g>
+        <!-- anomaly marker -->
+        <g class="fp-late">
+          <line x1="432" y1="282" x2="500" y2="282" stroke="#BDBDBD" stroke-width="1.4"/>
+          <path d="M500,282 l-7,-4 v8 z" fill="#BDBDBD"/>
+          <text x="466" y="274" fill="#BDBDBD" font-size="11" font-weight="600" letter-spacing="1" text-anchor="middle">LONGER</text>
+          <rect x="314" y="167" width="14" height="14" fill="#E83B3B"/>
+          <text x="321" y="155" fill="#FFFFFF" font-size="12.5" font-weight="700" letter-spacing="1.2" text-anchor="middle">DEVIATION</text>
+        </g>
+        <rect class="fp-pulse" x="314" y="167" width="14" height="14" fill="none" stroke="#E83B3B" stroke-width="1.5"/>
+        <!-- legend -->
+        <g font-size="12" font-weight="600" letter-spacing="1">
+          <line x1="372" y1="28" x2="398" y2="28" stroke="#E83B3B" stroke-width="3.2"/>
+          <text x="406" y="32" fill="#FFFFFF">NORMAL</text>
+          <line x1="478" y1="28" x2="504" y2="28" stroke="#BDBDBD" stroke-width="2.4"/>
+          <text x="512" y="32" fill="#FFFFFF">WORN</text>
+        </g>
+      </svg>
+      <figcaption>One travel, one curve: every movement of an actuator leaves a power fingerprint. Stylised, not a measurement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================================================= REFERENCES -->
+<section class="refs" aria-labelledby="refs-h">
+  <div class="wrap">
+    <h2 class="label" id="refs-h">Trusted in the field</h2>
+    <p class="sub">Companies, research institutions and partners already running skAInet Edge-Compute technology.</p>
+    <ul class="logos">
+      <li><img src="assets/logos/db.svg" alt="DB Netz AG" width="100" height="70" loading="lazy"></li>
+      <li><img src="assets/logos/framatome.svg" alt="Framatome" width="160" height="25" loading="lazy"></li>
+      <li><img src="assets/logos/kelvion.svg" alt="Kelvion" width="160" height="40" loading="lazy"></li>
+      <li><img src="assets/logos/kurtz-ersa.svg" alt="Kurtz Ersa" width="178" height="24" loading="lazy"></li>
+      <li><img src="assets/logos/gsi.svg" alt="GSI / FAIR" width="142" height="45" loading="lazy"></li>
+      <li><img src="assets/logos/rag.svg" alt="RAG" width="120" height="46" loading="lazy"></li>
+      <li><img src="assets/logos/rub.svg" alt="Ruhr-Universität Bochum" width="60" height="60" loading="lazy"></li>
+      <li><img src="assets/logos/msu.svg" alt="Montana State University" width="156" height="40" loading="lazy"></li>
+      <li><img src="assets/logos/nexufed.png" alt="NexuFed AI" width="480" height="93" loading="lazy"></li>
+    </ul>
+    <div class="grid cols-3 facts">
+      <div class="fact"><b>TRL 8–9</b><span>Proven in operation.</span></div>
+      <div class="fact"><b>40,000+</b><span>Point machines monitored.</span></div>
+      <div class="fact"><b>With Kelvion</b><span>IR diagnostics of air-fin coolers evaluated together: 52,440 IR images, 6 coolers, over 12 months.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= DELIVERS -->
+<section class="section" id="delivers" aria-labelledby="delivers-h">
+  <div class="wrap">
+    <h2 class="label" id="delivers-h">What WITNESS delivers</h2>
+    <p class="intro">WITNESS learns normal behaviour from the time-series data of each asset. The results are written back to your systems and labelled by the people who know the plant best: your maintenance staff.</p>
+    <div class="grid cols-3">
+      <div class="value"><span class="num">01</span><h3>Anomalies</h3><p>Deviations from normal operation, detected on the time-series data of each asset.</p></div>
+      <div class="value"><span class="num">02</span><h3>Predictions</h3><p>Estimates of upcoming maintenance needs, such as the remaining life of an actuator.</p></div>
+      <div class="value"><span class="num">03</span><h3>Efficiencies</h3><p>Estimated efficiencies of the monitored assets, e.g. energy per unit.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== HOW IT WORKS -->
+<section class="section alt" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 class="label" id="how-h">How WITNESS works</h2>
+    <h3 class="title">Modular, on-prem, built on <span class="red">standard PoE</span>. <span class="red">No vendor lock-in.</span></h3>
+    <p class="intro">WITNESS measures the physical condition of your machinery, stores the data in a rack in your own server room and runs the analytics there. Edge computes reach the rack over your normal company Ethernet.</p>
+
+    <div class="arch">
+      <!-- wide layout, recreated from the platform one-pager -->
+      <svg class="arch-wide" viewBox="0 0 950 230" role="img" aria-labelledby="aw-t aw-d">
+        <title id="aw-t">WITNESS architecture</title>
+        <desc id="aw-d">Measurement devices in each plant area connect to one edge compute per area. The edge computes reach the skAInet rack in the server room over the company Ethernet, in their own VLAN and TLS-encrypted. The rack holds storage (RAID or Ceph), an inference blade, an API blade and an optional training node. The base API offers REST, MQTT and WebSocket; Docker facades translate it to OPC UA for the DCS, Modbus TCP for the PLC, MQTT Sparkplug B for SCADA and SAP OData or IDoc for the ERP, plus EPICS and InfluxDB.</desc>
+        <defs><marker id="ahw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#E83B3B"/></marker></defs>
+        <g font-size="10.5" font-weight="600" letter-spacing=".8" fill="#6E6E6E">
+          <text x="0" y="18">PLANT AREAS</text>
+          <text x="318" y="18">SKAINET RACK · SERVER ROOM</text>
+          <text x="545" y="18">BASE API</text>
+          <text x="692" y="18">DOCKER FACADES</text>
+          <text x="946" y="18" text-anchor="end">YOUR SYSTEMS</text>
+          <text x="692" y="220">+ EPICS, INFLUXDB</text>
+        </g>
+        <text x="0" y="220" font-size="10.5" font-weight="600" letter-spacing=".8" fill="#C62828">COMPANY ETHERNET · OWN VLAN · TLS-ENCRYPTED</text>
+        <g stroke="#E83B3B" stroke-width="2.2" fill="none">
+          <line x1="140" y1="53" x2="163" y2="53" marker-end="url(#ahw)"/>
+          <line x1="140" y1="111" x2="163" y2="111" marker-end="url(#ahw)"/>
+          <line x1="140" y1="169" x2="163" y2="169" marker-end="url(#ahw)"/>
+          <line x1="270" y1="53" x2="290" y2="53"/><line x1="270" y1="111" x2="290" y2="111"/><line x1="270" y1="169" x2="290" y2="169"/>
+          <line x1="290" y1="26" x2="290" y2="198"/>
+          <line x1="290" y1="111" x2="316" y2="111" marker-end="url(#ahw)"/>
+          <line x1="500" y1="133" x2="543" y2="133" marker-end="url(#ahw)"/>
+          <line x1="650" y1="133" x2="672" y2="133"/>
+          <line x1="672" y1="45" x2="672" y2="183"/>
+          <line x1="672" y1="45" x2="690" y2="45" marker-end="url(#ahw)"/><line x1="672" y1="91" x2="690" y2="91" marker-end="url(#ahw)"/>
+          <line x1="672" y1="137" x2="690" y2="137" marker-end="url(#ahw)"/><line x1="672" y1="183" x2="690" y2="183" marker-end="url(#ahw)"/>
+          <line x1="822" y1="45" x2="844" y2="45" marker-end="url(#ahw)"/><line x1="822" y1="91" x2="844" y2="91" marker-end="url(#ahw)"/>
+          <line x1="822" y1="137" x2="844" y2="137" marker-end="url(#ahw)"/><line x1="822" y1="183" x2="844" y2="183" marker-end="url(#ahw)"/>
+        </g>
+        <!-- devices -->
+        <g font-size="12" fill="#3C3B3B" text-anchor="middle">
+          <rect x="0" y="30" width="140" height="46" fill="#F2F2F2"/><text x="70" y="50"><tspan font-weight="700">skAInet PoE</tspan><tspan x="70" dy="15">power, temperature</tspan></text>
+          <rect x="0" y="88" width="140" height="46" fill="#F2F2F2"/><text x="70" y="108"><tspan font-weight="700">skAInet PoE</tspan><tspan x="70" dy="15">IO-Link, IR camera</tspan></text>
+          <rect x="0" y="146" width="140" height="46" fill="#F2F2F2"/><text x="70" y="166"><tspan font-weight="700">Third-party</tspan><tspan x="70" dy="15">Modbus, OPC UA, …</tspan></text>
+        </g>
+        <!-- edge computes -->
+        <g font-size="12" fill="#FFFFFF" text-anchor="middle">
+          <rect x="165" y="30" width="105" height="46" fill="#262626"/><text x="217.5" y="50"><tspan font-weight="700">Edge compute</tspan><tspan x="217.5" dy="15">area A</tspan></text>
+          <rect x="165" y="88" width="105" height="46" fill="#262626"/><text x="217.5" y="108"><tspan font-weight="700">Edge compute</tspan><tspan x="217.5" dy="15">area B</tspan></text>
+          <rect x="165" y="146" width="105" height="46" fill="#262626"/><text x="217.5" y="166"><tspan font-weight="700">Edge compute</tspan><tspan x="217.5" dy="15">area C</tspan></text>
+        </g>
+        <!-- rack -->
+        <rect x="318" y="26" width="194" height="172" fill="#262626"/>
+        <g font-size="12" text-anchor="middle">
+          <rect x="330" y="36" width="170" height="34" fill="#FFFFFF"/><text x="415" y="57" fill="#3C3B3B"><tspan font-weight="700">Storage</tspan> RAID or Ceph</text>
+          <rect x="330" y="76" width="170" height="34" fill="#E83B3B"/><text x="415" y="97" fill="#FFFFFF" font-weight="700">Inference blade</text>
+          <rect x="330" y="116" width="170" height="34" fill="#FFFFFF"/><text x="415" y="137" fill="#3C3B3B"><tspan font-weight="700">API blade</tspan> base API</text>
+          <rect x="330.5" y="156.5" width="169" height="33" fill="none" stroke="#FFFFFF" stroke-dasharray="4 3"/><text x="415" y="177" fill="#FFFFFF"><tspan font-weight="700">Training node</tspan> optional</text>
+        </g>
+        <!-- base API -->
+        <rect x="545" y="100" width="105" height="66" fill="#E83B3B"/>
+        <text x="597.5" y="124" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan font-weight="700">Base API</tspan><tspan x="597.5" dy="15">REST, MQTT,</tspan><tspan x="597.5" dy="15">WebSocket</tspan></text>
+        <!-- facades and systems -->
+        <g font-size="12" text-anchor="middle">
+          <rect x="692" y="29" width="130" height="32" fill="#F2F2F2"/><text x="757" y="49" fill="#3C3B3B">OPC UA server</text>
+          <rect x="692" y="75" width="130" height="32" fill="#F2F2F2"/><text x="757" y="95" fill="#3C3B3B">Modbus TCP server</text>
+          <rect x="692" y="121" width="130" height="32" fill="#F2F2F2"/><text x="757" y="141" fill="#3C3B3B">MQTT Sparkplug B</text>
+          <rect x="692" y="167" width="130" height="32" fill="#F2F2F2"/><text x="757" y="187" fill="#3C3B3B">SAP OData / IDoc</text>
+          <rect x="846" y="29" width="100" height="32" fill="#262626"/><text x="896" y="49" fill="#FFFFFF" font-weight="700">DCS</text>
+          <rect x="846" y="75" width="100" height="32" fill="#262626"/><text x="896" y="95" fill="#FFFFFF" font-weight="700">PLC</text>
+          <rect x="846" y="121" width="100" height="32" fill="#262626"/><text x="896" y="141" fill="#FFFFFF" font-weight="700">SCADA</text>
+          <rect x="846" y="167" width="100" height="32" fill="#262626"/><text x="896" y="187" fill="#FFFFFF" font-weight="700">ERP</text>
+        </g>
+      </svg>
+
+      <!-- stacked layout for narrow screens -->
+      <svg class="arch-tall" viewBox="0 0 342 734" role="img" aria-labelledby="at-t at-d">
+        <title id="at-t">WITNESS architecture</title>
+        <desc id="at-d">Measurement devices in each plant area connect to one edge compute per area. The edge computes reach the skAInet rack in the server room over the company Ethernet, in their own VLAN and TLS-encrypted. The rack holds storage (RAID or Ceph), an inference blade, an API blade and an optional training node. The base API offers REST, MQTT and WebSocket; Docker facades translate it to OPC UA for the DCS, Modbus TCP for the PLC, MQTT Sparkplug B for SCADA and SAP OData or IDoc for the ERP, plus EPICS and InfluxDB.</desc>
+        <defs><marker id="aht" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#E83B3B"/></marker></defs>
+        <g font-size="10.5" font-weight="600" letter-spacing=".8" fill="#6E6E6E">
+          <text x="0" y="14">PLANT AREAS</text>
+          <text x="0" y="244">SKAINET RACK · SERVER ROOM</text>
+          <text x="24" y="554">DOCKER FACADES</text>
+          <text x="340" y="554" text-anchor="end">YOUR SYSTEMS</text>
+          <text x="24" y="730">+ EPICS, INFLUXDB</text>
+        </g>
+        <text x="0" y="196" font-size="10.5" font-weight="600" letter-spacing=".8" fill="#C62828">COMPANY ETHERNET · VLAN · TLS</text>
+        <g stroke="#E83B3B" stroke-width="2.2" fill="none">
+          <line x1="170" y1="46" x2="190" y2="46" marker-end="url(#aht)"/><line x1="170" y1="98" x2="190" y2="98" marker-end="url(#aht)"/><line x1="170" y1="150" x2="190" y2="150" marker-end="url(#aht)"/>
+          <line x1="320" y1="46" x2="334" y2="46"/><line x1="320" y1="98" x2="334" y2="98"/><line x1="320" y1="150" x2="334" y2="150"/>
+          <polyline points="334,46 334,214 300,214"/>
+          <line x1="300" y1="214" x2="300" y2="250" marker-end="url(#aht)"/>
+          <line x1="171" y1="438" x2="171" y2="466" marker-end="url(#aht)"/>
+          <polyline points="171,512 171,532 8,532 8,698"/>
+          <line x1="8" y1="578" x2="22" y2="578" marker-end="url(#aht)"/><line x1="8" y1="618" x2="22" y2="618" marker-end="url(#aht)"/>
+          <line x1="8" y1="658" x2="22" y2="658" marker-end="url(#aht)"/><line x1="8" y1="698" x2="22" y2="698" marker-end="url(#aht)"/>
+          <line x1="210" y1="578" x2="238" y2="578" marker-end="url(#aht)"/><line x1="210" y1="618" x2="238" y2="618" marker-end="url(#aht)"/>
+          <line x1="210" y1="658" x2="238" y2="658" marker-end="url(#aht)"/><line x1="210" y1="698" x2="238" y2="698" marker-end="url(#aht)"/>
+        </g>
+        <g font-size="12" fill="#3C3B3B" text-anchor="middle">
+          <rect x="0" y="24" width="170" height="44" fill="#F2F2F2"/><text x="85" y="42"><tspan font-weight="700">skAInet PoE</tspan><tspan x="85" dy="15">power, temperature</tspan></text>
+          <rect x="0" y="76" width="170" height="44" fill="#F2F2F2"/><text x="85" y="94"><tspan font-weight="700">skAInet PoE</tspan><tspan x="85" dy="15">IO-Link, IR camera</tspan></text>
+          <rect x="0" y="128" width="170" height="44" fill="#F2F2F2"/><text x="85" y="146"><tspan font-weight="700">Third-party</tspan><tspan x="85" dy="15">Modbus, OPC UA, …</tspan></text>
+        </g>
+        <g font-size="12" fill="#FFFFFF" text-anchor="middle">
+          <rect x="192" y="24" width="128" height="44" fill="#262626"/><text x="256" y="42"><tspan font-weight="700">Edge compute</tspan><tspan x="256" dy="15">area A</tspan></text>
+          <rect x="192" y="76" width="128" height="44" fill="#262626"/><text x="256" y="94"><tspan font-weight="700">Edge compute</tspan><tspan x="256" dy="15">area B</tspan></text>
+          <rect x="192" y="128" width="128" height="44" fill="#262626"/><text x="256" y="146"><tspan font-weight="700">Edge compute</tspan><tspan x="256" dy="15">area C</tspan></text>
+        </g>
+        <rect x="0" y="252" width="342" height="186" fill="#262626"/>
+        <g font-size="12" text-anchor="middle">
+          <rect x="12" y="264" width="318" height="34" fill="#FFFFFF"/><text x="171" y="285" fill="#3C3B3B"><tspan font-weight="700">Storage</tspan> RAID or Ceph</text>
+          <rect x="12" y="306" width="318" height="34" fill="#E83B3B"/><text x="171" y="327" fill="#FFFFFF" font-weight="700">Inference blade</text>
+          <rect x="12" y="348" width="318" height="34" fill="#FFFFFF"/><text x="171" y="369" fill="#3C3B3B"><tspan font-weight="700">API blade</tspan> base API</text>
+          <rect x="12.5" y="390.5" width="317" height="33" fill="none" stroke="#FFFFFF" stroke-dasharray="4 3"/><text x="171" y="411" fill="#FFFFFF"><tspan font-weight="700">Training node</tspan> optional</text>
+        </g>
+        <rect x="61" y="468" width="220" height="44" fill="#E83B3B"/>
+        <text x="171" y="486" font-size="12" fill="#FFFFFF" text-anchor="middle"><tspan font-weight="700">Base API</tspan><tspan x="171" dy="15">REST, MQTT, WebSocket</tspan></text>
+        <g font-size="12" text-anchor="middle">
+          <rect x="24" y="562" width="186" height="32" fill="#F2F2F2"/><text x="117" y="582" fill="#3C3B3B">OPC UA server</text>
+          <rect x="24" y="602" width="186" height="32" fill="#F2F2F2"/><text x="117" y="622" fill="#3C3B3B">Modbus TCP server</text>
+          <rect x="24" y="642" width="186" height="32" fill="#F2F2F2"/><text x="117" y="662" fill="#3C3B3B">MQTT Sparkplug B</text>
+          <rect x="24" y="682" width="186" height="32" fill="#F2F2F2"/><text x="117" y="702" fill="#3C3B3B">SAP OData / IDoc</text>
+          <rect x="240" y="562" width="100" height="32" fill="#262626"/><text x="290" y="582" fill="#FFFFFF" font-weight="700">DCS</text>
+          <rect x="240" y="602" width="100" height="32" fill="#262626"/><text x="290" y="622" fill="#FFFFFF" font-weight="700">PLC</text>
+          <rect x="240" y="642" width="100" height="32" fill="#262626"/><text x="290" y="662" fill="#FFFFFF" font-weight="700">SCADA</text>
+          <rect x="240" y="682" width="100" height="32" fill="#262626"/><text x="290" y="702" fill="#FFFFFF" font-weight="700">ERP</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="grid cols-4 claims">
+      <div class="panel"><h3>Modular</h3><p>One or more edge computes per plant area, a rack sized S, M or L, and an optional training node that retrains the models on site with labels from your maintenance staff.</p></div>
+      <div class="panel"><h3>On-prem</h3><p>No cloud required for storage, inference or training. Devices sit on an isolated LAN behind each edge compute, segmented into their own VLAN, TLS-encrypted; the rack has its own firewall.</p></div>
+      <div class="panel"><h3>Standard PoE</h3><p>One M12 cable per device carries power and data, which removes many installation hurdles.</p></div>
+      <div class="panel"><h3>No vendor lock-in</h3><p>Third-party devices with a digital interface connect too. Docker facades for OPC UA, Modbus TCP, MQTT Sparkplug B, SAP OData or IDoc, EPICS and InfluxDB fit WITNESS to what you already run.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== USE CASES -->
+<section class="section" id="usecases" aria-labelledby="uc-h">
+  <div class="wrap">
+    <h2 class="label" id="uc-h">Use cases</h2>
+    <p class="intro">Every movement of a motor-driven actuator leaves a power fingerprint. WITNESS reads it and tells you the remaining life. For heat exchangers, skAInet IR cameras show fouling as heat.</p>
+    <div class="grid cols-2 cases">
+
+      <article class="case">
+        <div class="body">
+          <p class="sector">Rail</p>
+          <h3>Railway points</h3>
+          <p class="head">Every throw of a point machine leaves a <span class="red">power fingerprint</span>. WITNESS reads it and tells you the <span class="red">remaining life</span>.</p>
+          <p>Condition-based instead of fixed-interval maintenance for point machines with asynchronous motors: an early warning before a throw fails, and replacements you can plan.</p>
+          <figure>
+            <img src="assets/fig/railway-power-curve.svg" width="329" height="189" loading="lazy" alt="Stylised current curve of one throw of a point machine: start-up peak, constant travel and end-position peak. The curve of a worn machine is longer and higher than that of a new one.">
+            <figcaption>One throw, one curve. Stylised, synthetic data.</figcaption>
+          </figure>
+          <div class="probe"><b>skAInet PowerProbe for points</b>Measures only the electric and magnetic field: galvanically isolated and non-reactive. Designed to avoid re-approval. Trialled with DB Netze in DIANA.</div>
+          <ul class="sq"><li>Detects icing, stiffness, contamination, missing lubrication, end-position problems, gearbox wear and bearing damage</li><li>Remaining life in throws and days, traffic-light status</li></ul>
+          <p class="ref">DB Netze DIANA · 40,000+ point machines monitored</p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="body">
+          <p class="sector">Water</p>
+          <h3>Slide gates</h3>
+          <p class="head">Every travel of a slide gate leaves a <span class="red">power fingerprint</span>. WITNESS reads it and tells you the <span class="red">remaining life</span>.</p>
+          <p>For sluice and slide gates in water, wastewater and hydraulic engineering: condition-based maintenance, an early warning before a gate gets stuck, and replacements you can plan.</p>
+          <figure>
+            <img src="assets/fig/slide-gates-drift.svg" width="329" height="189" loading="lazy" alt="Stylised drift chart: a feature of each travel drifts over time from the green normal zone through an amber zone towards a red anomaly threshold. WITNESS forecasts the remaining life in travels and days.">
+            <figcaption>Drift and forecast. Stylised, synthetic data.</figcaption>
+          </figure>
+          <ul class="sq"><li>Confidence after fewer than 10 travels</li><li>Confidence that the next travel succeeds</li><li>Remaining life in travels and days, presented to fit your SCADA or control system</li></ul>
+          <p class="ref">skAInet PowerSense in the control cabinet, PowerProbe as an option</p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="body">
+          <p class="sector">Process industry</p>
+          <h3>Motorised valves</h3>
+          <p class="head">Every stroke of a motorised valve leaves a <span class="red">power fingerprint</span>. WITNESS reads it and tells you the <span class="red">remaining life</span>.</p>
+          <p>For valve actuators with asynchronous motors: an early warning before a valve fails to open or close, and replacements you can plan for the next shutdown.</p>
+          <figure>
+            <img src="assets/fig/valves-power-curve.svg" width="329" height="189" loading="lazy" alt="Stylised current curve of one stroke of a valve actuator: start-up peak, constant travel and end-position peak. The curve of a worn actuator is longer and higher than that of a new one.">
+            <figcaption>One stroke, one curve. Stylised, synthetic data.</figcaption>
+          </figure>
+          <ul class="sq"><li>Features per stroke: duration, start-up peak current, energy, power factor, current profile, end-position peak</li><li>Detects stiffness, deposits, missing lubrication, seating problems, gearbox wear</li></ul>
+          <p class="ref">Framatome · in use from the predecessor project</p>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="body">
+          <p class="sector">Process plants</p>
+          <h3>Air-fin coolers</h3>
+          <p class="head">Fouling shows up as <span class="red">heat</span>. skAInet IR cameras tell you <span class="red">when to clean</span>.</p>
+          <p>Continuous infrared diagnostics: fouling that costs cooling capacity is found earlier than on an inspection round, and damaged coolers nobody had noticed are flagged.</p>
+          <div class="ir">
+            <figure><picture><source srcset="assets/img/ir-cooler-before-cleaning.webp" type="image/webp"><img src="assets/img/ir-cooler-before-cleaning.jpg" width="462" height="462" loading="lazy" alt="Infrared image of an air-fin cooler before cleaning, with bright hot spots on the fouled sections."></picture><span class="tag">Before</span></figure>
+            <figure><picture><source srcset="assets/img/ir-cooler-after-cleaning.webp" type="image/webp"><img src="assets/img/ir-cooler-after-cleaning.jpg" width="462" height="462" loading="lazy" alt="Infrared image of the same air-fin cooler after cleaning, with a more even surface temperature."></picture><span class="tag after">After</span></figure>
+          </div>
+          <p class="small" style="margin:0">Same cooler and colour scale, ten days apart. Brighter means warmer: fouled sections stand out as hot spots.</p>
+          <ul class="sq"><li>Hot-spot map of every cooler and fouling trend over months</li><li>Cleaning intervals set by condition, no unnecessary cleaning</li></ul>
+          <p class="ref">Evaluated with Kelvion · 52,440 IR images, 6 coolers, 12 months</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= HARDWARE -->
+<section class="section alt" id="hardware" aria-labelledby="hw-h">
+  <div class="wrap">
+    <h2 class="label" id="hw-h">Hardware</h2>
+    <h3 class="title">skAInet PoE measurement devices: <span class="red">one cable</span> each for power and data.</h3>
+    <p class="intro">Plus any third-party device with a digital interface: USB, Modbus, OPC UA, IO-Link, MQTT, Ethernet; RS-485, CAN and serial via adapters.</p>
+
+    <div class="grid cols-3">
+      <div class="panel device"><p class="what">Voltage, current, power</p><h3>PowerSense</h3><p>Installed in the control cabinet where a direct connection is allowed. Records current, voltage and phase angle at 10 kHz.</p></div>
+      <div class="panel device"><p class="what">Load, non-contact</p><h3>PowerProbe</h3><p>Measures only the electric and magnetic field: galvanically isolated and non-reactive, designed to avoid re-approval.</p></div>
+      <div class="panel device"><p class="what">Temperature</p><h3>TempProbe</h3><p>36 Type-K thermocouple channels.</p></div>
+      <div class="panel device"><p class="what">Thermal images</p><h3>IRcam base / premium</h3><p>Fixed thermal camera, IP67, outdoors all year. Base: 160×120 px, NETD &lt; 50 mK. Premium: 640×512 px, NETD &lt; 35 mK.</p></div>
+      <div class="panel device"><p class="what">IO-Link</p><h3>iolink</h3><p>Connects up to 6 IO-Link sensors.</p></div>
+      <div class="panel device"><p class="what">Machine states, signals</p><h3>IO, StackLight</h3><p>Reads machine states and signals.</p></div>
+    </div>
+
+    <div class="grid cols-3 edge">
+      <figure class="photo contain"><picture><source srcset="assets/img/powerprobe-exploded.webp" type="image/webp"><img src="assets/img/powerprobe-exploded.jpg" width="680" height="504" loading="lazy" alt="Exploded view of the skAInet PowerProbe: housing, circuit board with Ethernet jack, sensor elements and mounting parts."></picture><figcaption>PowerProbe, exploded view.</figcaption></figure>
+      <figure class="photo"><picture><source srcset="assets/img/edge-in-use-1.webp" type="image/webp"><img src="assets/img/edge-in-use-1.jpg" width="960" height="723" loading="lazy" alt="Red skAInet edge compute on a workbench with several M12 PoE cables connected."></picture><figcaption>Edge compute with M12 PoE cables.</figcaption></figure>
+      <figure class="photo"><picture><source srcset="assets/img/edge-in-use-2.webp" type="image/webp"><img src="assets/img/edge-in-use-2.jpg" width="960" height="723" loading="lazy" alt="Close-up of the edge compute housing with M12 ports, some of them connected."></picture><figcaption>Sealed for the shop floor.</figcaption></figure>
+    </div>
+
+    <div class="grid cols-2 edge" style="margin-top:32px">
+      <div>
+        <h3>Edge compute</h3>
+        <p>One or more per plant area, sealed for the shop floor. Powers and reads the devices, pre-processes the data.</p>
+        <ul class="sq">
+          <li>64-bit ARM, 8 GB RAM, 32 GB eMMC</li>
+          <li>7 M12 PoE LAN ports, 1 Gigabit WAN</li>
+          <li>48–72 V DC input, IP67</li>
+          <li>−25 to +70 °C operating range</li>
+          <li>Yocto Linux, SBOM, encrypted updates</li>
+          <li>Own mappers in C++ or Python</li>
+        </ul>
+        <p class="small" style="margin-top:12px">Details: <a href="https://edge-compute.skainet.io/">edge-compute.skainet.io</a></p>
+      </div>
+      <div>
+        <h3>Network security</h3>
+        <p>Edge computes reach the rack over your normal company Ethernet.</p>
+        <ul class="sq">
+          <li>Devices on an isolated LAN behind each edge compute</li>
+          <li>Segmented into its own VLAN</li>
+          <li>TLS transport encryption, optional VPN</li>
+          <li>Rack behind its own firewall</li>
+        </ul>
+        <p style="margin-top:12px">For extended cases, federated learning or fully homomorphic encryption are available as options.</p>
+      </div>
+    </div>
+
+    <div class="rack">
+      <h3 class="sub">The skAInet rack</h3>
+      <div class="grid cols-4">
+        <div class="panel unit"><h4>Storage</h4><span class="tag">RAID or Ceph cluster</span><p>All raw data and all results, in your server room. RAID in S, a Ceph cluster in M and L.</p></div>
+        <div class="panel unit"><h4>Inference blade</h4><span class="tag">Scheduled cron jobs</span><p>Anomaly detection, classification, regression, prediction. Writes results back, e.g. bearing damage, imbalance, operating state, remaining useful life, efficiency, energy per unit.</p></div>
+        <div class="panel unit"><h4>API blade</h4><span class="tag">Base API + facades</span><p>REST, WebSocket, MQTT. Docker facades for OPC UA, Modbus TCP, Sparkplug B, SAP OData or IDoc, EPICS and InfluxDB.</p></div>
+        <div class="panel unit"><h4>Training node</h4><span class="tag">Optional, multi-GPU</span><p>Retrains anomaly and prediction models on site with labels from your maintenance staff.</p></div>
+      </div>
+      <div class="tablewrap" role="region" aria-labelledby="variants-cap" tabindex="0">
+        <table class="variants">
+          <caption id="variants-cap">Rack variants. All figures are estimates for sizing talks. Height includes switch and firewall; power is connected load (nameplate), typical draw is lower.</caption>
+          <thead>
+            <tr><th scope="col"><span style="color:var(--grey)">Estimates</span></th><th scope="col"><b>S</b><span>one line or pilot</span></th><th scope="col"><b>M</b><span>plant with several areas</span></th><th scope="col"><b>L</b><span>large site, redundant</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Edge computes</th><td>up to 4</td><td>up to 12</td><td>up to 30</td></tr>
+            <tr><th scope="row">Storage</th><td>1 server, RAID 6, approx. 30 TB usable</td><td>Ceph, 3 nodes, approx. 60 TB usable</td><td>Ceph, 5 nodes, approx. 150 TB usable</td></tr>
+            <tr><th scope="row">Inference, API</th><td>1 inference blade (CPU), 1 API blade</td><td>1 inference blade (1 GPU), 1 API blade</td><td>2 inference blades (GPU), 2 API blades</td></tr>
+            <tr><th scope="row">Training node</th><td>–</td><td>optional, 2 GPUs</td><td>optional, 4 GPUs</td></tr>
+            <tr class="key"><th scope="row">Height incl. network</th><td><strong>approx. 6 U</strong></td><td><strong>approx. 8 U</strong>, 12 U with training</td><td><strong>approx. 12 U</strong>, 16 U with training</td></tr>
+            <tr class="key"><th scope="row">Connected load</th><td><strong>approx. 1 kW</strong></td><td><strong>approx. 1.5 kW</strong>, 3 kW with training</td><td><strong>approx. 3 kW</strong>, 5.5 kW with training</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= RED BAND -->
+<section class="band" aria-labelledby="band-h">
+  <div class="wrap">
+    <h2 id="band-h">Your data.<br>Your models.</h2>
+    <p>All measurements and results belong to you and stay in your plant. You can deploy your own detections as Docker containers on the inference blade, reading from and writing to the same storage and API as ours. Which models run is up to you.</p>
+  </div>
+</section>
+
+<!-- ========================================================= INSURERS -->
+<section class="section insure" id="insurers" aria-labelledby="ins-h">
+  <div class="wrap">
+    <h2 class="label" id="ins-h">For industrial insurers</h2>
+    <h3 class="title">With WITNESS, insurers get <span class="red">clear, physics-based data</span> for the <span class="red">dynamic risk assessment</span> of industrial plants.</h3>
+    <p class="intro">Risk surveys, inspections and self-declarations show a plant at one point in time. WITNESS continuously measures the physical condition of critical machinery on site: the risk picture follows the real condition of the plant.</p>
+    <div class="grid cols-3">
+      <div class="value"><span class="num">01</span><h3>Underwriting</h3><p>Measured, asset-specific condition data instead of self-declarations: a technical basis for the risk assessment.</p></div>
+      <div class="value"><span class="num">02</span><h3>Loss prevention</h3><p>Detected anomalies and maintenance predictions show where inspections and loss-prevention measures matter most.</p></div>
+      <div class="value"><span class="num">03</span><h3>Claims</h3><p>A measured history of the physical condition of an asset supports the technical assessment of a loss.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== DOWNLOADS -->
+<section class="section alt" id="downloads" aria-labelledby="dl-h">
+  <div class="wrap">
+    <h2 class="label" id="dl-h">Downloads</h2>
+    <p class="intro">One-page summaries of WITNESS as PDF, for your team and your next meeting.</p>
+<!-- DOWNLOADS:START (generated by tools/build_downloads.py, do not edit by hand) -->
+    <ul class="dl-list">
+      <li><span class="na"><span class="name">Overview</span><span class="meta">What WITNESS is and why it matters</span></span></li>
+      <li><span class="na"><span class="name">Technology platform</span><span class="meta">Architecture, devices, edge compute, rack variants</span></span></li>
+      <li><span class="na"><span class="name">Architecture</span><span class="meta">Devices, edge compute, network, rack, learning loop</span></span></li>
+      <li><span class="na"><span class="name">Integration</span><span class="meta">Data in, base API, Docker facades to PLC, DCS, SCADA, ERP</span></span></li>
+      <li><span class="na"><span class="name">Use case: railway points</span><span class="meta">Remaining life of point machines</span></span></li>
+      <li><span class="na"><span class="name">Use case: slide gates</span><span class="meta">Early warning before a gate gets stuck</span></span></li>
+      <li><span class="na"><span class="name">Use case: motorised valves</span><span class="meta">Early warning before a valve fails to open or close</span></span></li>
+      <li><span class="na"><span class="name">Use case: air-fin coolers</span><span class="meta">IR cameras find fouling and tell you when to clean</span></span></li>
+      <li><span class="na"><span class="name">For industrial insurers</span><span class="meta">Physics-based data for dynamic risk assessment</span></span></li>
+    </ul>
+    <p class="dl-note">Available on request: <a href="mailto:hello@skainet.io?subject=WITNESS%20one-pagers">hello@skainet.io</a></p>
+<!-- DOWNLOADS:END -->
+  </div>
+</section>
+</main>
+
+<!-- ========================================================== FOOTER -->
+<footer class="footer" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="grid cols-3">
+      <div>
+        <img class="logo" src="assets/img/skainet-logo-white.png" width="400" height="107" alt="skAInet">
+        <h2 id="contact-h">Let's start with a pilot installation.</h2>
+        <a class="mail" href="mailto:hello@skainet.io?subject=WITNESS">hello@skainet.io</a>
+      </div>
+      <div>
+        <p class="kicker">Team</p>
+        <p>skAInet LLC is a pre-launch startup within the CDL Doha programme. WITNESS builds on lessons learned at Auto-Intern.</p>
+        <ul class="people">
+          <li><b>Atiyeh Chatrsefid</b><br>CRO</li>
+          <li><b>Stephan Bökelmann</b><br>CTO</li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker">More</p>
+        <ul class="links">
+          <li><a href="https://skainet.io">skainet.io</a></li>
+          <li><a href="https://edge-compute.skainet.io/">edge-compute.skainet.io</a></li>
+          <li><a href="#downloads">One-pagers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© skAInet LLC</span>
+      <span>No cookies, no trackers. Font: Biryani, SIL Open Font License (<a href="assets/fonts/biryani/OFL.txt">OFL.txt</a>).</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
