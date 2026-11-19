@@ -297,3 +297,8 @@ table.variants { width: 100%; min-width: 620px; border-collapse: collapse; font-
 .footer .logo { width: 150px; margin-bottom: 18px; }
 .cases { background: var(--panel); padding: 24px; }
 @media (max-width: 699px) { .cases { padding: 0; background: none; } .case { background: var(--panel); } }
+.dl-list a .name::after { content: "  \2193 PDF"; color: var(--red); font-size: 13px; letter-spacing: .06em; }
+@media (max-width: 699px) {
+  .hero .logo { display: none; }
+  .fingerprint text { font-size: 16px; letter-spacing: .5px; }
+}
