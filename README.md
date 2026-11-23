@@ -1,6 +1,6 @@
 # WITNESS landing page
 
-Static landing page for WITNESS by skAInet LLC, deployed with GitHub Pages:
+Static landing page for WITNESS by skAInet, deployed with GitHub Pages:
 <https://witness.skainet.io/>
 
 Plain HTML and CSS with a few lines of vanilla JS (mobile menu). No framework,
