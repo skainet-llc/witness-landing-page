@@ -1,7 +1,7 @@
 # WITNESS landing page
 
 Static landing page for WITNESS by skAInet LLC, deployed with GitHub Pages:
-<https://skainet-llc.github.io/witness-landing-page/>
+<https://witness.skainet.io/>
 
 Plain HTML and CSS with a few lines of vanilla JS (mobile menu). No framework,
 no build step for the page itself, no cookies, no trackers, no external
